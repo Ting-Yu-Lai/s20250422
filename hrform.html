@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .headertable {
+        padding: 20px 20% 20px 20%;
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 20px;
+    }
+
+    .headertable h1 {
+        margin-bottom: 1px;
+    }
+
+    .headertable p {
+        margin-top: 1px;
+    }
+
+    .fullname {
+        display: block;
+        float: none;
+        text-align: left;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .formtable {
+        margin: auto;
+        padding: 20px;
+    }
+
+    .center-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-control {
+        width: 150px;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid lightgray;
+        font-size: 14px;
+    }
+
+    .address-control {
+        width: 450px;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid lightgray;
+        font-size: 14px;
+    }
+
+    input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 8px 2px rgba(0, 183, 255, 0.7);
+        border: 1px solid #00b7ff;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .label-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+</style>
+
+<body>
+    <div class="headertable">
+        <h1>Job Application</h1>
+        <p>Please complete the form below to apply for a position with us.</p>
+    </div>
+    <div class="center-container">
+        <form action="" class="formtable">
+            <label id="fullname" class="fullname">Full Name</label>
+            <table class="nametable">
+                <tr>
+                    <td><input class="form-control" type="text" id="firstname" name=""></td>
+                    <td><input class="form-control" type="text" id="middlename" name=""></td>
+                    <td><input class="form-control" type="text" id="lastname" name=""></td>
+                </tr>
+                <tr>
+                    <td><label style="color:#464d5f; font-size: 10px;" for="firstname">First Name</label></td>
+                    <td><label style="color:#464d5f; font-size: 10px;" for="middlename">Middle Name</label></td>
+                    <td><label style="color:#464d5f; font-size: 10px;" for="lastname">Last Name</label></td>
+                </tr>
+            </table>
+            <label class="fullname">Birth Day</label></td>
+                <table class="birthday-table">
+                    <tr>
+                        <td>
+                            <select class="form-control" name="Month" id="Month">
+                                <option value="1">January</option>
+                                <option value="2">February</option>
+                                <option value="3">March</option>
+                                <option value="4">April</option>
+                                <option value="5">May</option>
+                                <option value="6">June</option>
+                                <option value="7">July</option>
+                                <option value="8">August</option>
+                                <option value="9">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" name="Day" id="Day"> <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option> </select>
+                        </td>
+                        <td>
+                            <select class="form-control" name="Year" id="Year">
+                                <option value="2000">2000</option>
+                                <option value="2001">2001</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label style="color:#464d5f; font-size: 10px;" for="Month">Month</label></td>
+                        <td><label style="color:#464d5f; font-size: 10px;" for="Day">Day</label></td>
+                        <td><label style="color:#464d5f; font-size: 10px;" for="Year">Year</label></td>
+                    </tr>
+                </table>
+                <label class="fullname">Current Address</label></td>
+                    <table>
+                        <tr>
+                            <td><input class="address-control" type="text" id="Street Address"></td>
+                        </tr>
+                        <tr>
+                            <td><label style="color:#464d5f; font-size: 10px;" for="Street Address">Street Address</label></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><input class="form-control" type="text" id="City"></td>
+                            <td><input class="form-control" type="text" id="State / Province"></td>
+                        </tr>
+                        <tr>
+                            <td><label style="color:#464d5f; font-size: 10px;" for="City">City</td>
+                            <td><label style="color:#464d5f; font-size: 10px;" for="State / Province">State / Province</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><label style="color:black;" for="Email Address">Email Address</label></td>
+                            <td><label style="color:black;" for="Phone Number">Phone Number</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" id="email" name="email"></td>
+                            <td><input type="tel" id="phone" name="phone"></td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <label for="Available Start Date">Available Start Date</label><br>
+                    <input type="date" id="Available Start Date" name="birthday">
+        </form>
+    </div>
+</body>
+
+</html>
