@@ -8,8 +8,9 @@
 </head>
 <style>
     .headertable {
-        padding-left:20%;
+        padding-left: 20%;
         border-bottom: 1px solid lightgray;
+        margin-bottom: 30px;
     }
 
     .headertable h1 {
@@ -19,21 +20,137 @@
     .headertable p {
         margin-top: 0.1cm;
     }
+
+    .label td label {
+        font-size: 8px;
+        color: lightgray;
+    }
+
+    .select-size {
+        width: 168px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .formtable {
+        margin: auto;
+        width: auto;
+    }
+
+    td input, td select {
+        width:100%;
+        box-sizing: border-box;
+    }
 </style>
+
 <body>
     <table class="headertable">
         <tr>
-            <td><h1>Job Aplication</h1></td>
+            <td>
+                <h1>Job Aplication</h1>
+            </td>
         </tr>
         <tr>
-            <td><p>Please complete the form below to apply for a position with us.</p></td>
+            <td>
+                <p>Please complete the form below to apply for a position with us.</p>
+            </td>
         </tr>
     </table>
     <form>
-        <table>
-            
+        <table class="formtable">
+            <tr>
+                <td>Full Name</td>
+            </tr>
+            <tr>
+                <td><input type="text" id="fistname"></td>
+                <td><input type="text" id="middlename"></td>
+                <td><input type="text" id="lastname"></td>
+            </tr>
+            <tr class="label">
+                <td><label for="fistname">First Name</label></td>
+                <td><label for="middlename">Middle Name</label></td>
+                <td><label for="lastname">Last Name</label></td>
+            </tr>
+            <tr>
+                <td>Birth Date</td>
+            </tr>
+            <tr>
+                <td><select class="select-size" id="month" name="month">
+                        <option value="">Please select a Month</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select></td>
+                <td><select class="select-size" id="day" name="day"></select></td>
+                <td><select class="select-size" id="year" name="year" placeholder="Please select a year"></select></td>
+            </tr>
+            <tr class="label">
+                <td><label for="month">Month</label></td>
+                <td><label for="day">Day</label></td>
+                <td><label for="year">Year</label></td>
+            </tr>
+            <tr>
+                <td>Current Address</td>
+            </tr>
+            <tr >
+                <td><input id="streetaddress"></td>
+            </tr>
+            <tr class="label">
+                <td><label for="streetaddress">Street Address</label></td>
+
+            </tr>
+            <tr>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>61</td>
+                <td>62</td>
+            </tr>
+            <tr>
+                <td>71</td>
+                <td>72</td>
+            </tr>
         </table>
     </form>
 </body>
+<script>
+    const day = document.getElementById("day");
+    const defaultOption = document.createElement("option");
+    defaultOption.text = "Pleasse select a day";
+    defaultOption.valus = "";
+    day.appendChild(defaultOption);
+
+    for (let i = 1; i <= 31; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        day.appendChild(option);
+    }
+
+    const year = document.getElementById("year");
+    const yearOption = document.createElement("option");
+    yearOption.text = "Please select a year";
+    yearOption.value = "";
+    year.appendChild(yearOption);
+
+    for (let i = 1968; i <= 2007; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        year.appendChild(option);
+    }
+</script>
 
 </html>
