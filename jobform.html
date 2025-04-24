@@ -11,6 +11,7 @@
         padding-left: 20%;
         border-bottom: 1px solid lightgray;
         margin-bottom: 30px;
+        width:100%;
     }
 
     .headertable h1 {
@@ -34,12 +35,30 @@
 
     .formtable {
         margin: auto;
-        width: auto;
+        width: 40%;
+        /* border-collapse: collapse; */
+        /* border: 1px solid black; */
+        border-bottom: 1px solid lightgray;
+
     }
 
-    td input, td select {
-        width:100%;
+    .formtable2 {
+        margin: auto;
+        width: 40%;
+        /* border-collapse: collapse; */
+        /* border: 1px solid black; */
+        /* border-bottom: 1px solid lightgray; */
+
+    }
+
+    td select {
+        width: 100%;
         box-sizing: border-box;
+    }
+
+    input::placeholder {
+        color: lightgray;
+        font-size: 10px;
     }
 </style>
 
@@ -61,7 +80,7 @@
             <tr>
                 <td>Full Name</td>
             </tr>
-            <tr>
+            <tr class="name">
                 <td><input type="text" id="fistname"></td>
                 <td><input type="text" id="middlename"></td>
                 <td><input type="text" id="lastname"></td>
@@ -101,35 +120,82 @@
             <tr>
                 <td>Current Address</td>
             </tr>
-            <tr >
-                <td><input id="streetaddress"></td>
+            <tr>
+                <td colspan="3"><input style="width:100%" id="streetaddress"></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
             </tr>
             <tr class="label">
                 <td><label for="streetaddress">Street Address</label></td>
 
             </tr>
             <tr>
-                <td>4</td>
+                <td colspan="3"><input style="width:100%" id="streetaddress2"></td>
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+            <tr class="label">
+                <td><label for="streetaddress2">Street Address Line 2</label></td>
+            </tr>
+            <div class="city">
+                <tr>
+                <td><input type="text" id="city" ></td>
+                <td><input type="text" id="state" ></td>
+                <td><input type="text" id="zipcode" ></td>
+                </tr>
+            </div>
+            <tr class="label">
+                <td><label for="city">City</label></td>
+                <td><label for="state">State / Province</label></td>
+                <td><label for="zipcode">Postal / Zip Code</label></td>
             </tr>
             <tr>
-                <td>5</td>
+                <td></td>
+            </tr>
+            <tr >
+                <td><label for="email">Email Address</label></td>
+                <td><label for="photonumber">Phone Number</label></td>
+            </tr>
+            <tr >
+                <td><input type="text" id="email" placeholder="ex:youremail@mail.com" ></label></td>
+                <td><input type="text" id="photonumber" placeholder="(+886)123-456789" ></label></td>
+            </tr>
+            <tr class="label">
+                <td><label for="email">exaple@gmail.com</label></td>
             </tr>
             <tr>
-                <td>61</td>
-                <td>62</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>71</td>
-                <td>72</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <table class="formtable2">
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><label for="posotion"></label></td>
+                <td><label for="knowus"></label></td>
+            </tr>
+            <tr>
+                <td><select class="select-size" id="position">
+                    <option value="Sales Manager"></option>
+                </select></td>
+                <td></td>
             </tr>
         </table>
     </form>
 </body>
+
 <script>
     const day = document.getElementById("day");
     const defaultOption = document.createElement("option");
     defaultOption.text = "Pleasse select a day";
-    defaultOption.valus = "";
+    defaultOption.value = "";
     day.appendChild(defaultOption);
 
     for (let i = 1; i <= 31; i++) {
