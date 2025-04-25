@@ -11,7 +11,7 @@
         padding-left: 20%;
         border-bottom: 1px solid lightgray;
         margin-bottom: 30px;
-        width:100%;
+        width: 100%;
     }
 
     .headertable h1 {
@@ -59,6 +59,22 @@
     input::placeholder {
         color: lightgray;
         font-size: 10px;
+    }
+
+    .inputfieldset {
+        width:100%;
+        margin:auto;
+    }
+
+    .buttonstyle {
+        text-shadow: -1px -1px 0 #000, 0 0 3px rgba(51, 160, 255, .5);
+        background: linear-gradient(0deg, #404040 0, #1a1a1a);
+        color :white;
+        align-items: center;
+    }
+
+    .button td {
+        margin: auto;
     }
 </style>
 
@@ -139,9 +155,9 @@
             </tr>
             <div class="city">
                 <tr>
-                <td><input type="text" id="city" ></td>
-                <td><input type="text" id="state" ></td>
-                <td><input type="text" id="zipcode" ></td>
+                    <td><input type="text" id="city"></td>
+                    <td><input type="text" id="state"></td>
+                    <td><input type="text" id="zipcode"></td>
                 </tr>
             </div>
             <tr class="label">
@@ -152,13 +168,13 @@
             <tr>
                 <td></td>
             </tr>
-            <tr >
+            <tr>
                 <td><label for="email">Email Address</label></td>
                 <td><label for="photonumber">Phone Number</label></td>
             </tr>
-            <tr >
-                <td><input type="text" id="email" placeholder="ex:youremail@mail.com" ></label></td>
-                <td><input type="text" id="photonumber" placeholder="(+886)123-456789" ></label></td>
+            <tr>
+                <td><input type="text" id="email" placeholder="ex:youremail@mail.com"></label></td>
+                <td><input type="text" id="photonumber" placeholder="(+886)123-456789"></label></td>
             </tr>
             <tr class="label">
                 <td><label for="email">exaple@gmail.com</label></td>
@@ -178,14 +194,44 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td><label for="posotion"></label></td>
-                <td><label for="knowus"></label></td>
+                <td><label for="position">Position</label></td>
+                <td><label for="knowus">How did you hear anout us</label></td>
             </tr>
             <tr>
                 <td><select class="select-size" id="position">
-                    <option value="Sales Manager"></option>
-                </select></td>
-                <td></td>
+                        <option value="">Please select</option>
+                        <option value="Sales Manager">Sales Manager</option>
+                        <option value="Develope">Develope</option>
+                        <option value="Product Lead">Product Lead</option>
+                    </select></td>
+                <td><select class="select-size" id="knowus">
+                        <option value="">Please select</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="Event">Event</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Company Website">Company Website</option>
+                        <option value="Family/Friend">Family/Friend</option>
+                        <option value="Other">Other</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label class="label" for="startdate">Available Start Date</label></td>
+            </tr>
+            <tr>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset class="inputfieldset">
+                        <legend>
+                            <p>Upload Your Resume</p>
+                        </legend>
+                        <input multiple="multiple" type="file" name="file" aria-hidden="true" tabindex="-1">
+                    </fieldset>
+                </td>
+            </tr>
+            <tr >
+                <td><button class="buttonstyle" type="submit" >Apply</button></td>
             </tr>
         </table>
     </form>
